@@ -127,7 +127,6 @@ function submitFrom(event) {
  <p class="subscribe-text"> We sent an email with the details. <br /> Please, confirm your email address. </p>`;
     return true;
   } else {
-    alert("Please, write your data correct to sign up");
     return false;
   }
 }
