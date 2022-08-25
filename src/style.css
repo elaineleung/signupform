@@ -256,6 +256,11 @@ footer a:active {
     .password-error-icon::after {
         display: none;
     }
+
+    .submit-input {
+        padding-top: 17px;
+        padding-bottom: 14px;
+    }
 }
 
 @media (min-width: 600px) {
@@ -289,6 +294,11 @@ footer a:active {
 
     footer {
         margin-top: 30px;
+    }
+
+    .submit-input {
+        padding-top: 17px;
+        padding-bottom: 14px;
     }
 }
 
