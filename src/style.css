@@ -150,7 +150,7 @@ input:focus {
     color: white;
     padding: 17px 0px 14px 0px;
     border-radius: 5px;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -256,11 +256,6 @@ footer a:active {
     .password-error-icon::after {
         display: none;
     }
-
-    .submit-input {
-        padding-top: 17px;
-        padding-bottom: 14px;
-    }
 }
 
 @media (min-width: 600px) {
@@ -295,11 +290,6 @@ footer a:active {
     footer {
         margin-top: 30px;
     }
-
-    .submit-input {
-        padding-top: 17px;
-        padding-bottom: 14px;
-    }
 }
 
 
@@ -330,7 +320,7 @@ footer a:active {
     }
 
     .button {
-        padding: 20px 120px;
+        padding: 20px 100px;
     }
 
     footer {
@@ -346,6 +336,9 @@ footer a:active {
 }
 
 @media (min-width: 1100px) {
+    .button {
+        padding: 20px 100px;
+    }
 
     .first-name-error-icon::after,
     .last-name-error-icon::after,
@@ -355,7 +348,16 @@ footer a:active {
     }
 }
 
+@media (min-width: 1150px) {
+    .button {
+        padding: 20px 110px;
+    }
+}
+
 @media (min-width: 1200px) {
+    .button {
+        padding: 20px 120px;
+    }
 
     .first-name-error-icon::after,
     .last-name-error-icon::after,
