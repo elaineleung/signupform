@@ -1,14 +1,14 @@
 :root {
     --primary-red: hsl(0, 100%, 74%);
-    --primary-red-box-shadow-color: #db6a5d;
-    --primary-red-border-color: #db6a5d;
+    --primary-red-box-shadow-color: hsl(6, 64%, 61%);
+    --primary-red-border-color: hsl(6, 64%, 61%);
     --primary-green: hsl(154, 59%, 51%);
-    --primary-green-border-color: #37C585;
-    --primary-green-box-shadow-color: #31b278;
+    --primary-green-border-color: hsl(153, 56%, 49%);
+    --primary-green-box-shadow-color: hsl(153, 57%, 45%);
     --accent-blue: hsl(248, 32%, 49%);
     --neutral-dark-blue: hsl(249, 10%, 26%);
     --neutral-grayish-blue: hsl(246, 25%, 77%);
-    --box-shadow: #D3696E;
+    --box-shadow: hsl(357, 55%, 62%);
     --error-color: red;
 }
 
