@@ -123,11 +123,11 @@ function submitFrom(event) {
     sendPassword(event) == true
   ) {
     let formContainer = document.querySelector(".form-background");
-    formContainer.innerHTML = `<h2>Thank you for subscribing!</h2>
+    formContainer.innerHTML = `<h2>Thank you for sign up!</h2>
  <p class="subscribe-text"> We sent an email with the details. <br /> Please, confirm your email address. </p>`;
     return true;
   } else {
-    alert("Please, write your data correct to subscribe");
+    alert("Please, write your data correct to sign up");
     return false;
   }
 }

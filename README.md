@@ -16,7 +16,7 @@ Your users should be able to:
 
 ### Solution Links
 
-![](images/screenshot.jpg)
+![](src/images/screenshot.jpg)
 
 - Solution URL: ()
 - Live Site URL: ()
