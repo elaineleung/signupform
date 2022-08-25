@@ -38,12 +38,24 @@
           <button class="button"><strong>Try it free 7 days</strong> then $20/mo. thereafter</button>
           <div class="form-background">
 
-            <form>
-              <input type="text" placeholder="First name" autofocus="off" autocomplete="on" class="first-name-input" />
-              <input type="text" placeholder="Last name" autofocus="off" autocomplete="on" class="last-name-input" />
-              <input type="email" placeholder="Email Address" autofocus="off" autocomplete="on" class="email-input" />
-              <input type="password" placeholder="Password" autofocus="off" autocomplete="off" class="password-input" />
-              <input type="submit" value="claim your free trial" class="submit-input" />
+            <form id="form">
+              <input type="text" placeholder="First Name" autofocus="on" autocomplete="on" class="first-name-input"
+                id="first-name-input" /><span id="first-name-error-message"></span><span class="first-name-error-icon"
+                id="first-name-error-icon" style="display: none;"></span>
+
+              <input type="text" placeholder="Last Name" autofocus="on" autocomplete="on" class="last-name-input"
+                id="last-name-input" /><span id="last-name-error-message"></span><span class="last-name-error-icon"
+                id="last-name-error-icon" style="display: none;"></span>
+
+              <input type="email" placeholder="Email Address" autofocus="on" autocomplete="on" class="email-input"
+                id="email-input" /><span id="email-error-message"></span><span class="email-error-icon"
+                id="email-error-icon" style="display: none;"></span>
+
+              <input type="password" placeholder="Password" autofocus="on" autocomplete="off" class="password-input"
+                id="password-input" /><span id="password-error-message"></span><span class="password-error-icon"
+                id="password-error-icon" style="display: none;"></span>
+
+              <input type="submit" value="claim your free trial" class="submit-input" id="submit-input" />
             </form>
 
             <div class="form-text-below"> By clicking the button, you are agreeing to our
@@ -54,10 +66,11 @@
       </main>
       <footer>
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/Horv-Kitty">Kitti Horvath</a>.
       </footer>
     </div>
   </div>
+  <script src="src/javascript.js"></script>
 </body>
 
 </html>

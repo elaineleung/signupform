@@ -1,21 +1,27 @@
 :root {
     --primary-red: hsl(0, 100%, 74%);
+    --primary-red-box-shadow-color: #db6a5d;
+    --primary-red-border-color: #db6a5d;
     --primary-green: hsl(154, 59%, 51%);
+    --primary-green-border-color: #37C585;
+    --primary-green-box-shadow-color: #31b278;
     --accent-blue: hsl(248, 32%, 49%);
     --neutral-dark-blue: hsl(249, 10%, 26%);
     --neutral-grayish-blue: hsl(246, 25%, 77%);
+    --box-shadow: #D3696E;
+    --error-color: red;
 }
-
 
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--primary-red);
+    margin-top: 0px;
 }
 
 div.background-image {
     background: url(images/bg-intro-desktop.png);
     max-width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -31,6 +37,7 @@ main {
     display: flex;
     flex-direction: row;
     max-width: 1200px;
+    margin-inline: 20px;
 }
 
 .text-container {
@@ -42,7 +49,6 @@ main {
 }
 
 h1 {
-    font-size: 48px;
     color: white;
     line-height: 1.1;
     margin-bottom: 15px;
@@ -65,11 +71,11 @@ p {
     color: rgb(255, 255, 255, 0.7);
     border: none;
     border-radius: 10px;
-    padding: 20px 120px;
-    box-shadow: 0px 7px 1px #D3696E;
+    padding: 22px 120px;
+    box-shadow: 0px 7px 1px var(--box-shadow);
     display: block;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .button strong {
@@ -84,31 +90,65 @@ form {
 .form-background {
     background-color: white;
     border-radius: 10px;
-    padding: 30px 30px 40px 30px;
-    box-shadow: 0px 7px 1px #D3696E;
+    padding: 30px 30px 42px 30px;
+    box-shadow: 0px 7px 1px var(--box-shadow);
 }
 
 .first-name-input,
 .last-name-input,
 .email-input,
 .password-input {
-    padding: 20px 0px 20px 30px;
+    padding: 16px 0px 16px 30px;
     margin: 10px;
     border: 1px solid rgb(0, 0, 0, 0.1);
     border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
 }
 
-::placeholder {
-    font-weight: 700;
-    font-size: 15px;
+input:focus {
+    outline: none !important;
+    border: 1px solid var(--accent-blue);
+}
+
+.first-name-error-icon::after,
+.last-name-error-icon::after,
+.email-error-icon::after,
+.password-error-icon::after {
+    content: url('images/icon-error.svg');
+    position: relative;
+    bottom: 72px;
+    left: 400px;
+}
+
+#first-name-error-message,
+#last-name-error-message,
+#email-error-message,
+#password-error-message {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--error-color);
+    text-align: end;
+    margin-right: 10px;
+}
+
+.red-border {
+    border: 1px solid var(--error-color);
+}
+
+.green-border {
+    border: 1px solid var(--primary-green);
 }
 
 .submit-input {
+    font-family: 'Poppins', sans-serif;
     background-color: var(--primary-green);
-    border: 1px solid #37C585;
-    box-shadow: 0px 3px 1px #31b278;
+    border: 1px solid var(--primary-green-border-color);
+    box-shadow: 0px 3px 1px var(--primary-green-box-shadow-color);
     color: white;
-    padding: 20px 0px 17px 0px;
+    padding: 17px 0px 14px 0px;
     border-radius: 5px;
     font-weight: 500;
     font-size: 15px;
@@ -126,8 +166,18 @@ form {
 .submit-input:active {
     cursor: pointer;
     background-color: var(--primary-red);
-    border: 1px solid #db6a5d;
-    box-shadow: 0px 3px 1px #db6a5d;
+    border: 1px solid var(--primary-red-border-color);
+    box-shadow: 0px 3px 1px var(--primary-red-box-shadow-color);
+}
+
+.submit-input:focus {
+    border: 1px solid rgb(0, 0, 0, 0);
+}
+
+.subscribe-text {
+    font-size: 16px;
+    color: var(--accent-blue);
+    font-weight: 500;
 }
 
 .form-text-below {
@@ -145,11 +195,10 @@ form {
 .form-text-below-color:hover {
     cursor: pointer;
     color: var(--accent-blue);
-
 }
 
 footer {
-    margin-top: 30px;
+    margin-top: 60px;
     font-size: 11px;
     text-align: center;
 }
@@ -165,4 +214,143 @@ footer a:hover {
 
 footer a:active {
     color: var(--primary-red);
+}
+
+
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+        margin-top: 0px;
+        max-width: 350px;
+    }
+
+    .text-container {
+        margin-right: 0px;
+        margin-bottom: 60px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .button {
+        padding: 20px 70px;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+
+    .first-name-error-icon::after,
+    .last-name-error-icon::after,
+    .email-error-icon::after,
+    .password-error-icon::after {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    main {
+        flex-direction: column;
+        margin-top: 0px;
+        max-width: 550px;
+    }
+
+    .text-container {
+        margin-right: 0px;
+        margin-bottom: 60px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 38px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .button {
+        padding: 20px 120px;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        margin-inline: 30px;
+    }
+
+    .text-container {
+        margin-right: 70px;
+        margin-bottom: 0px;
+    }
+
+    h1 {
+        text-align: start;
+        font-size: 48px;
+    }
+
+    h2 {
+        text-align: start;
+    }
+
+    p {
+        text-align: start;
+    }
+
+    .button {
+        padding: 20px 120px;
+    }
+
+    footer {
+        margin-top: 60px;
+    }
+
+    .first-name-error-icon::after,
+    .last-name-error-icon::after,
+    .email-error-icon::after,
+    .password-error-icon::after {
+        left: 330px;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    .first-name-error-icon::after,
+    .last-name-error-icon::after,
+    .email-error-icon::after,
+    .password-error-icon::after {
+        left: 370px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .first-name-error-icon::after,
+    .last-name-error-icon::after,
+    .email-error-icon::after,
+    .password-error-icon::after {
+        left: 400px;
+    }
 }
