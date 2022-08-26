@@ -24,19 +24,17 @@ div.background-image {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-content: center;
 }
 
 .flex-container {
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
+    margin: 120px 20px 20px 20px;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    max-width: 350px;
 }
 
 .text-container {
@@ -80,11 +78,6 @@ h2 {
     text-align: center;
 }
 
-.form-container {
-    width: 540px;
-    max-width: 100%;
-}
-
 .button {
     font-family: var(--font-family);
     background-color: var(--accent-blue);
@@ -105,7 +98,8 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 300px;
+    min-width: 100%;
 }
 
 .form-background {
@@ -140,8 +134,8 @@ input:focus {
     box-sizing: border-box;
     content: url('images/icon-error.svg');
     position: relative;
-    bottom: 102px;
-    left: 220px;
+    bottom: 80px;
+    left: 400px;
 }
 
 #first-name-error-message,
@@ -176,7 +170,8 @@ input:focus {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
-    padding: 17px 0px 14px;
+    padding-top: 17px;
+    padding-bottom: 14px;
 }
 
 #submit-input:hover {
@@ -245,30 +240,20 @@ footer a:active {
 }
 
 @media (min-width: 600px) {
-    main {
-        max-width: 550px;
+
+    form {
+        width: 450px;
     }
 
     h1 {
         font-size: 38px;
-    }
-
-    .first-name-error-icon::after,
-    .last-name-error-icon::after,
-    .email-error-icon::after,
-    .password-error-icon::after {
-        left: 400px;
-        bottom: 80px;
     }
 }
 
 
 @media (min-width: 1000px) {
     main {
-        display: flex;
         flex-direction: row;
-        max-width: 1200px;
-        margin-inline: 20px;
     }
 
     .text-container {
@@ -295,33 +280,5 @@ footer a:active {
 
     footer {
         margin-top: 60px;
-    }
-
-    .first-name-error-icon::after,
-    .last-name-error-icon::after,
-    .email-error-icon::after,
-    .password-error-icon::after {
-        left: 330px;
-        bottom: 80px;
-    }
-}
-
-@media (min-width: 1100px) {
-
-    .first-name-error-icon::after,
-    .last-name-error-icon::after,
-    .email-error-icon::after,
-    .password-error-icon::after {
-        left: 370px;
-    }
-}
-
-@media (min-width: 1200px) {
-
-    .first-name-error-icon::after,
-    .last-name-error-icon::after,
-    .email-error-icon::after,
-    .password-error-icon::after {
-        left: 400px;
     }
 }
