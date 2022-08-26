@@ -122,7 +122,7 @@ function submitFrom(event) {
     sendEmail(event) == true &&
     sendPassword(event) == true
   ) {
-    let formContainer = document.querySelector(".form-background");
+    let formContainer = document.querySelector(".form-container");
     formContainer.innerHTML = `<h2>Thank you for signing up!</h2>
  <p class="subscribe-text"> We sent an email with the details. <br /> Please, confirm your email address. </p>`;
     return true;
