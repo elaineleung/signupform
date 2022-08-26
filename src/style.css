@@ -5,17 +5,20 @@
     --primary-green: hsl(154, 59%, 51%);
     --primary-green-border-color: hsl(153, 56%, 49%);
     --primary-green-box-shadow-color: hsl(153, 57%, 45%);
+    --primary-green-box-hover-color: hsl(155, 65%, 68%);
     --accent-blue: hsl(248, 32%, 49%);
     --neutral-dark-blue: hsl(249, 10%, 26%);
     --neutral-grayish-blue: hsl(246, 25%, 77%);
     --box-shadow: hsl(357, 55%, 62%);
     --error-color: red;
+    --font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family);
     background-color: var(--primary-red);
-    margin-top: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 div.background-image {
@@ -35,29 +38,45 @@ div.background-image {
 
 main {
     display: flex;
-    flex-direction: row;
-    max-width: 1200px;
-    margin-inline: 20px;
+    flex-direction: column;
+    max-width: 350px;
 }
 
 .text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 70px;
     text-align: start;
+    margin-right: 0px;
+    margin-bottom: 60px;
 }
 
 h1 {
     color: white;
     line-height: 1.1;
     margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 0px 1px rgb(0, 0, 0, 0.1);
 }
 
-p {
-    font-size: 16px;
+h2 {
+    text-align: center;
+}
+
+.main-text {
     color: white;
+    font-size: 16px;
     font-weight: 400;
+    text-align: center;
+    text-shadow: 0px 1px rgb(0, 0, 0, 0.2);
+}
+
+.subscribe-text {
+    color: var(--accent-blue);
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
 }
 
 .form-container {
@@ -66,17 +85,18 @@ p {
 }
 
 .button {
-    font-size: 16px;
+    font-family: var(--font-family);
     background-color: var(--accent-blue);
-    color: rgb(255, 255, 255, 0.7);
+    box-shadow: 0px 7px 1px var(--box-shadow);
+    font-size: 16px;
+    color: rgb(255, 255, 255, 0.8);
     border: none;
     border-radius: 10px;
-    padding: 22px;
     width: 100%;
-    box-shadow: 0px 7px 1px var(--box-shadow);
     display: block;
     margin: 0 auto;
     margin-bottom: 25px;
+    padding: 20px;
 }
 
 .button strong {
@@ -86,6 +106,7 @@ p {
 form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .form-background {
@@ -99,11 +120,12 @@ form {
 .last-name-input,
 .email-input,
 .password-input {
+    font-family: var(--font-family);
+    margin-block: 10px;
     padding: 16px 0px 16px 30px;
     margin: 10px;
     border: 1px solid rgb(0, 0, 0, 0.1);
     border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 14px;
 }
@@ -117,6 +139,7 @@ input:focus {
 .last-name-error-icon::after,
 .email-error-icon::after,
 .password-error-icon::after {
+    box-sizing: border-box;
     content: url('images/icon-error.svg');
     position: relative;
     bottom: 72px;
@@ -127,10 +150,9 @@ input:focus {
 #last-name-error-message,
 #email-error-message,
 #password-error-message {
-    font-family: 'Poppins', sans-serif;
+    color: var(--error-color);
     font-weight: 500;
     font-size: 14px;
-    color: var(--error-color);
     text-align: end;
     margin-right: 10px;
 }
@@ -144,24 +166,25 @@ input:focus {
 }
 
 .submit-input {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family);
     background-color: var(--primary-green);
     border: 1px solid var(--primary-green-border-color);
     box-shadow: 0px 3px 1px var(--primary-green-box-shadow-color);
-    color: white;
-    padding: 17px 0px 14px 0px;
     border-radius: 5px;
+    padding: 17px 0px 14px 0px;
+    margin: 10px 10px 15px 10px;
+    color: white;
     font-weight: 600;
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
-    margin: 10px 10px 15px 10px;
+
 }
 
 .submit-input:hover {
     cursor: pointer;
-    background-color: #77E2B5;
+    background-color: var(--primary-green-box-hover-color);
 }
 
 .submit-input:active {
@@ -175,17 +198,13 @@ input:focus {
     border: 1px solid rgb(0, 0, 0, 0);
 }
 
-.subscribe-text {
-    font-size: 16px;
-    color: var(--accent-blue);
-    font-weight: 500;
-}
+
 
 .form-text-below {
+    color: var(--neutral-grayish-blue);
     text-align: center;
     font-size: 11px;
     font-weight: 600;
-    color: var(--neutral-grayish-blue);
 }
 
 .form-text-below-color {
@@ -199,7 +218,7 @@ input:focus {
 }
 
 footer {
-    margin-top: 60px;
+    margin-top: 30px;
     font-size: 11px;
     text-align: center;
 }
@@ -219,37 +238,6 @@ footer a:active {
 
 
 @media (max-width: 600px) {
-    main {
-        flex-direction: column;
-        margin-top: 0px;
-        max-width: 350px;
-    }
-
-    .text-container {
-        margin-right: 0px;
-        margin-bottom: 60px;
-    }
-
-    h1 {
-        text-align: center;
-        font-size: 30px;
-    }
-
-    h2 {
-        text-align: center;
-    }
-
-    p {
-        text-align: center;
-    }
-
-    .button {
-        padding: 20px;
-    }
-
-    footer {
-        margin-top: 30px;
-    }
 
     .first-name-error-icon::after,
     .last-name-error-icon::after,
@@ -261,31 +249,11 @@ footer a:active {
 
 @media (min-width: 600px) {
     main {
-        flex-direction: column;
-        margin-top: 0px;
         max-width: 550px;
     }
 
-    .text-container {
-        margin-right: 0px;
-        margin-bottom: 60px;
-    }
-
     h1 {
-        text-align: center;
         font-size: 38px;
-    }
-
-    h2 {
-        text-align: center;
-    }
-
-    p {
-        text-align: center;
-    }
-
-    footer {
-        margin-top: 30px;
     }
 }
 
@@ -295,7 +263,7 @@ footer a:active {
         display: flex;
         flex-direction: row;
         max-width: 1200px;
-        margin-inline: 30px;
+        margin-inline: 20px;
     }
 
     .text-container {
@@ -312,7 +280,11 @@ footer a:active {
         text-align: start;
     }
 
-    p {
+    .main-text {
+        text-align: start;
+    }
+
+    .subscribe-text {
         text-align: start;
     }
 
