@@ -171,15 +171,14 @@ input:focus {
     border: 1px solid var(--primary-green-border-color);
     box-shadow: 0px 3px 1px var(--primary-green-box-shadow-color);
     border-radius: 5px;
-    padding: 17px 0px 14px 0px;
-    margin: 10px 10px 15px 10px;
+    padding: 10px 0px 7px 0px;
+    margin: 10px 0px 15px 0px;
     color: white;
     font-weight: 600;
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
-
 }
 
 .submit-input:hover {
@@ -254,6 +253,11 @@ footer a:active {
 
     h1 {
         font-size: 38px;
+    }
+
+    .submit-input {
+        padding: 17px 0px 14px 0px;
+        margin: 10px 10px 15px 10px;
     }
 }
 
