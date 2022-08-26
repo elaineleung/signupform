@@ -130,7 +130,7 @@ form {
 }
 
 input:focus {
-    outline: none !important;
+    outline: none;
     border: 1px solid var(--accent-blue);
 }
 
@@ -179,9 +179,6 @@ input:focus {
     display: block;
     margin: 0 auto;
     width: 100%;
-}
-
-input[type="submit"] {
     padding: 17px 0px 14px;
 }
 
