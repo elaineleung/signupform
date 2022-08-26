@@ -141,7 +141,7 @@ input:focus {
     box-sizing: border-box;
     content: url('images/icon-error.svg');
     position: relative;
-    bottom: 72px;
+    bottom: 80px;
     left: 400px;
 }
 
@@ -179,10 +179,9 @@ input:focus {
     display: block;
     margin: 0 auto;
     width: 100%;
-    padding-block: 17px 14px;
 }
 
-input[type="submit" i] {
+input[type="submit"] {
     padding: 17px 0px 14px;
 }
 
