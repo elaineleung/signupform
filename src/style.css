@@ -78,7 +78,7 @@ h2 {
     text-align: center;
 }
 
-.button {
+.try-free-text {
     font-family: var(--font-family);
     background-color: var(--accent-blue);
     box-shadow: 0px 7px 1px var(--box-shadow);
@@ -91,7 +91,7 @@ h2 {
     padding: 20px;
 }
 
-.button strong {
+.try-free-text strong {
     color: rgb(255, 255, 255, 1);
 }
 
@@ -102,7 +102,7 @@ form {
     min-width: 100%;
 }
 
-.form-background {
+.form-container {
     background-color: white;
     border-radius: 10px;
     padding: 40px 40px 42px 40px;
@@ -158,7 +158,7 @@ input:focus {
     border: 1px solid var(--primary-green);
 }
 
-#submit-input {
+button {
     font-family: var(--font-family);
     background-color: var(--primary-green);
     border: 1px solid var(--primary-green-border-color);
@@ -174,20 +174,16 @@ input:focus {
     padding-bottom: 14px;
 }
 
-#submit-input:hover {
+button:hover {
     cursor: pointer;
     background-color: var(--primary-green-box-hover-color);
 }
 
-#submit-input:active {
+button:active {
     cursor: pointer;
     background-color: var(--primary-red);
     border: 1px solid var(--primary-red-border-color);
     box-shadow: 0px 3px 1px var(--primary-red-box-shadow-color);
-}
-
-#submit-input:focus {
-    border: 1px solid rgb(0, 0, 0, 0);
 }
 
 .form-text-below {
