@@ -17,12 +17,10 @@
 body {
     background-color: var(--primary-red);
     margin: 0px;
-    padding: 0px;
 }
 
 div.background-image {
     background: url(images/bg-intro-desktop.png);
-    max-width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
