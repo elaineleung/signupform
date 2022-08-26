@@ -14,6 +14,7 @@ function sendFirstName(event) {
     document.getElementById("first-name-input").className = document
       .getElementById("first-name-input")
       .className.replace(" green-border", "");
+    errorMessage.className = errorMessage.className + " error-margins";
     return false;
   } else {
     errorMessage.innerHTML = "";
@@ -23,6 +24,7 @@ function sendFirstName(event) {
     document.getElementById("first-name-input").className = document
       .getElementById("first-name-input")
       .className.replace(" red-border", "");
+    errorMessage.className = errorMessage.className - " error-margins";
     return true;
   }
 }
@@ -43,6 +45,7 @@ function sendLastName(event) {
     document.getElementById("last-name-input").className = document
       .getElementById("last-name-input")
       .className.replace(" green-border", "");
+    errorMessage.className = errorMessage.className + " error-margins";
     return false;
   } else {
     errorMessage.innerHTML = "";
@@ -52,6 +55,7 @@ function sendLastName(event) {
     document.getElementById("last-name-input").className = document
       .getElementById("last-name-input")
       .className.replace(" red-border", "");
+    errorMessage.className = errorMessage.className - " error-margins";
     return true;
   }
 }
@@ -72,6 +76,7 @@ function sendPassword(event) {
     document.getElementById("password-input").className = document
       .getElementById("password-input")
       .className.replace(" green-border", "");
+    errorMessage.className = errorMessage.className + " error-margins";
     return false;
   } else {
     errorMessage.innerHTML = "";
@@ -81,6 +86,7 @@ function sendPassword(event) {
     document.getElementById("password-input").className = document
       .getElementById("password-input")
       .className.replace(" red-border", "");
+    errorMessage.className = errorMessage.className - " error-margins";
     return true;
   }
 }
@@ -98,6 +104,7 @@ function sendEmail(event) {
     document.getElementById("email-input").className = document
       .getElementById("email-input")
       .className.replace(" red-border", "");
+    errorMessage.className = errorMessage.className - " error-margins";
     return true;
   } else {
     errorMessage.innerHTML = "Looks like this is not a valid email address";
@@ -110,6 +117,7 @@ function sendEmail(event) {
     document.getElementById("email-input").className = document
       .getElementById("email-input")
       .className.replace(" green-border", "");
+    errorMessage.className = errorMessage.className + " error-margins";
     return false;
   }
 }
