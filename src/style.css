@@ -179,11 +179,11 @@ input:focus {
     display: block;
     margin: 0 auto;
     width: 100%;
+    padding-block: 17px 14px;
 }
 
-input[type="submit"] {
-    padding-block: 17px 14px !important;
-    padding: inherit;
+input[type="submit" i] {
+    padding: 17px 0px 14px;
 }
 
 #submit-input:hover {
