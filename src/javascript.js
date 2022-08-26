@@ -6,9 +6,6 @@ function sendFirstName(event) {
   if (firstNameInput.value == "" || firstNameInput.value == " ") {
     errorMessage.innerHTML = "First Name cannot be empty";
     document.getElementById("first-name-error-icon").style.display = "block";
-    document.getElementById(
-      "first-name-input"
-    ).placeholder = ` Please, add your First Name`;
     document.getElementById("first-name-input").className =
       document.getElementById("first-name-input").className + " red-border";
     document.getElementById("first-name-input").className = document
@@ -35,9 +32,6 @@ function sendLastName(event) {
   if (lastNameInput.value == "" || lastNameInput.value == " ") {
     errorMessage.innerHTML = "Last Name cannot be empty";
     document.getElementById("last-name-error-icon").style.display = "block";
-    document.getElementById(
-      "last-name-input"
-    ).placeholder = ` Please, add your Last Name`;
     document.getElementById("last-name-input").className =
       document.getElementById("last-name-input").className + " red-border";
     document.getElementById("last-name-input").className = document
@@ -64,9 +58,6 @@ function sendPassword(event) {
   if (passwordInput.value == "" || passwordInput.value == " ") {
     errorMessage.innerHTML = "Password cannot be empty";
     document.getElementById("password-error-icon").style.display = "block";
-    document.getElementById(
-      "password-input"
-    ).placeholder = ` Please, add your Password`;
     document.getElementById("password-input").className =
       document.getElementById("password-input").className + " red-border";
     document.getElementById("password-input").className = document
@@ -102,9 +93,6 @@ function sendEmail(event) {
   } else {
     errorMessage.innerHTML = "Looks like this is not a valid email address";
     document.getElementById("email-error-icon").style.display = "block";
-    document.getElementById(
-      "email-input"
-    ).placeholder = `Please, add your Email Address`;
     document.getElementById("email-input").className =
       document.getElementById("email-input").className + " red-border";
     document.getElementById("email-input").className = document

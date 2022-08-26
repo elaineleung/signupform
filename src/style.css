@@ -144,8 +144,8 @@ input:focus {
     box-sizing: border-box;
     content: url('images/icon-error.svg');
     position: relative;
-    bottom: 80px;
-    left: 400px;
+    bottom: 102px;
+    left: 220px;
 }
 
 #first-name-error-message,
@@ -238,17 +238,6 @@ footer a:active {
     color: var(--primary-red);
 }
 
-
-@media (max-width: 600px) {
-
-    .first-name-error-icon::after,
-    .last-name-error-icon::after,
-    .email-error-icon::after,
-    .password-error-icon::after {
-        display: none;
-    }
-}
-
 @media (min-width: 600px) {
     main {
         max-width: 550px;
@@ -256,6 +245,14 @@ footer a:active {
 
     h1 {
         font-size: 38px;
+    }
+
+    .first-name-error-icon::after,
+    .last-name-error-icon::after,
+    .email-error-icon::after,
+    .password-error-icon::after {
+        left: 400px;
+        bottom: 80px;
     }
 }
 
@@ -299,6 +296,7 @@ footer a:active {
     .email-error-icon::after,
     .password-error-icon::after {
         left: 330px;
+        bottom: 80px;
     }
 }
 
