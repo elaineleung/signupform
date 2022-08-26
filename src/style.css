@@ -236,6 +236,16 @@ footer a:active {
     color: var(--primary-red);
 }
 
+@media (max-width: 600px) {
+
+    .first-name-error-icon::after,
+    .last-name-error-icon::after,
+    .email-error-icon::after,
+    .password-error-icon::after {
+        display: none;
+    }
+}
+
 @media (min-width: 600px) {
     main {
         max-width: 550px;
