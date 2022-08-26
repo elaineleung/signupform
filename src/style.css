@@ -15,7 +15,6 @@
 }
 
 body {
-    font-family: var(--font-family);
     background-color: var(--primary-red);
     margin: 0px;
     padding: 0px;
@@ -52,6 +51,7 @@ main {
 }
 
 h1 {
+    font-family: var(--font-family);
     color: white;
     line-height: 1.1;
     margin-bottom: 15px;
@@ -61,10 +61,12 @@ h1 {
 }
 
 h2 {
+    font-family: var(--font-family);
     text-align: center;
 }
 
 .main-text {
+    font-family: var(--font-family);
     color: white;
     font-size: 16px;
     font-weight: 400;
@@ -73,6 +75,7 @@ h2 {
 }
 
 .subscribe-text {
+    font-family: var(--font-family);
     color: var(--accent-blue);
     font-size: 16px;
     font-weight: 500;
@@ -149,6 +152,7 @@ input:focus {
 #last-name-error-message,
 #email-error-message,
 #password-error-message {
+    font-family: var(--font-family);
     color: var(--error-color);
     font-weight: 500;
     font-size: 14px;
@@ -176,9 +180,6 @@ input:focus {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
     padding: 17px 0px 14px;
 }
 
@@ -199,6 +200,7 @@ input:focus {
 }
 
 .form-text-below {
+    font-family: var(--font-family);
     color: var(--neutral-grayish-blue);
     text-align: center;
     font-size: 11px;
@@ -217,6 +219,7 @@ input:focus {
 }
 
 footer {
+    font-family: var(--font-family);
     margin-top: 30px;
     font-size: 11px;
     text-align: center;
